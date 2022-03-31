@@ -23,12 +23,14 @@ const config = {
         loader: 'esbuild-loader'
       },
       {
-        test: /\.css$/,
+        test: /\.s[ac]ss$/,
         exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
           { loader: "css-loader", options: { url: false } },
-          "postcss-loader"
+          "postcss-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
         ],
       },
     ],
