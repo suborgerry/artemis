@@ -14,7 +14,7 @@ module.exports = merge(common, {
     historyApiFallback: true,
     open: true,
     compress: true,
-    hot: true,
+    hot: false,
     port: 8080,
   },
 
@@ -40,7 +40,7 @@ module.exports = merge(common, {
             loader: 'file-loader',
             options: {
               publicPath: '../',
-              name: `assets/image/[name].[ext]`,
+              name: `[path][name].[ext]`,
             }
           }
         ],

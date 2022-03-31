@@ -3,7 +3,7 @@
   "version": "3.0.1",
   "description": "Sensible webpack 5 boilerplate using Babel and PostCSS.",
   "main": "index.js",
-  "author": "Tania Rascia",
+  "author": "Borodin Gerry",
   "license": "MIT",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
@@ -39,6 +39,7 @@
     "sass": "^1.43.5",
     "sass-loader": "^12.2.0",
     "style-loader": "^3.3.0",
+    "tailwindcss": "^3.0.23",
     "webpack": "^5.58.2",
     "webpack-cli": "^4.9.0",
     "webpack-dev-server": "^4.3.1",
@@ -46,6 +47,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:taniarascia/webpack-boilerplate"
+    "url": "git@github.com:suborgerry/MyWebPack.git"
   }
 }
