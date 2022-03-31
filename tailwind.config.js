@@ -1,7 +1,22 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  content: ["./src/*.html"],
+  content: ['./src/**/*.{html,js}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Lato', ...defaultTheme.fontFamily.sans],
+      },
+      screens: {
+        xxl: '1410px',
+      },
+    },
   },
-  plugins: [],
-}
+  variants: {
+    borderWidth: ['responsive', 'hover'],
+  },
+  plugins: [require('@tailwindcss/forms', {
+    strategy: 'base', // only generate global styles
+    // strategy: 'class', // only generate classes
+  })],
+};

@@ -1,89 +1,45 @@
-# 📦 webpack Boilerplate
+# webpack-tailwindcss
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
-Sensible webpack 5 boilerplate using Babel, PostCSS and Sass.
-
-## Installation
-
-Clone this repo and npm install.
-
-```bash
-npm i
-```
+This template is made to help start your project based on Webpack + TailwindCSS. Setup is pretty simple, while keeping best performance practices set up.
 
 ## Usage
 
-### Development server
+1) To use this template, click "Use this template" green button in the top right.
+2) Clone the repository to your computer
+3) Install dependencies - `npm ci`
+4) Configure where your views are in [tailwind.config.js](https://github.com/pavelloz/webpack-tailwindcss-purgecss/blob/master/tailwind.config.js).
 
-```bash
-npm start
-```
+### npm tasks
+* `npm start` - runs dev server on `http://localhost:8080` and reloads the browser on changes
+* `npm run build` - build assets in production mode, ready to deploy
 
-You can view the development server at `localhost:8080`.
+## Webpack setup includes
+* JS and CSS transpilation and minification done by ESBuild (FAST)
+* CSS extraction using `mini-css-extract-plugin`
+* HTML generation using `html-webpack-plugin`
+* Example of:
+  * Prefetched chunk, if you want to load faster critical parts of your build
+  * Asynchronously loaded chunks, to block page rendering when loading/parsing/executing
+  * Named chunks if you dont want your chunks to look like `2aae6c35c94fcfb415dbe95f408b9ce91ee846ed.js`
 
-### Production build
+## PostCSS setup includes
+* [autoprefixer](https://github.com/postcss/autoprefixer) - Adding vendor prefixes, just in case. See package.json for `browserslist` config
+* [postcss-import](https://github.com/postcss/postcss-import) - Support for @imports - just like in SASS
 
-```bash
-npm run build
-```
+## TailwindCSS setup includes
+* Official [TailwindCSS forms](https://tailwindcss.com/docs/plugins#forms) plugin loaded
+* How to extend default color palette
+* How to set a different font as first in font family declaration
+* `xxl` breakpoint for responsive purposes
 
-> Note: Install [http-server](https://www.npmjs.com/package/http-server) globally to deploy a simple server.
+## Notes
+* Before every build, build directory is deleted to avoid deploying old assets
 
-```bash
-npm i -g http-server
-```
+## Additional resources
 
-You can view the deploy by creating a server in `dist`.
+* [Tailwind.run](https://tailwind.run/new) - sandbox for quickly mocking/debugging components in isolation
+* [TailwindCSS Cheat Sheet](https://nerdcave.com/tailwind-cheat-sheet) - with search. Hopefully will be updated to the latest TailwindCSS version soon
+* [VSCode IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - Custom config aware autocomplete for TailwindCSS
+* [Webpack dynamic imports](https://medium.com/front-end-weekly/webpack-and-dynamic-imports-doing-it-right-72549ff49234) - How and why do the dynamic imports. See [`js/app.js`](src/js/app.js) for example.
 
-```bash
-cd dist && http-server
-```
-
-## Features
-
-- [webpack](https://webpack.js.org/)
-- [Babel](https://babeljs.io/)
-- [Sass](https://sass-lang.com/)
-- [PostCSS](https://postcss.org/)
-
-## Dependencies
-
-### webpack
-
-- [`webpack`](https://github.com/webpack/webpack) - Module and asset bundler.
-- [`webpack-cli`](https://github.com/webpack/webpack-cli) - Command line interface for webpack
-- [`webpack-dev-server`](https://github.com/webpack/webpack-dev-server) - Development server for webpack
-- [`webpack-merge`](https://github.com/survivejs/webpack-merge) - Simplify development/production configuration
-- [`cross-env`](https://github.com/kentcdodds/cross-env) - Cross platform configuration
-
-### Babel
-
-- [`@babel/core`](https://www.npmjs.com/package/@babel/core) - Transpile ES6+ to backwards compatible JavaScript
-- [`@babel/plugin-proposal-class-properties`](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) - Use properties directly on a class (an example Babel config)
-- [`@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for Babel
-
-### Loaders
-
-- [`babel-loader`](https://webpack.js.org/loaders/babel-loader/) - Transpile files with Babel and webpack
-- [`sass-loader`](https://webpack.js.org/loaders/sass-loader/) - Load SCSS and compile to CSS
-  - [`sass`](https://www.npmjs.com/package/sass) - Node Sass
-- [`postcss-loader`](https://webpack.js.org/loaders/postcss-loader/) - Process CSS with PostCSS
-  - [`postcss-preset-env`](https://www.npmjs.com/package/postcss-preset-env) - Sensible defaults for PostCSS
-- [`css-loader`](https://webpack.js.org/loaders/css-loader/) - Resolve CSS imports
-- [`style-loader`](https://webpack.js.org/loaders/style-loader/) - Inject CSS into the DOM
-
-### Plugins
-
-- [`clean-webpack-plugin`](https://github.com/johnagan/clean-webpack-plugin) - Remove/clean build folders
-- [`copy-webpack-plugin`](https://github.com/webpack-contrib/copy-webpack-plugin) - Copy files to build directory
-- [`html-webpack-plugin`](https://github.com/jantimon/html-webpack-plugin) - Generate HTML files from template
-- [`mini-css-extract-plugin`](https://github.com/webpack-contrib/mini-css-extract-plugin) - Extract CSS into separate files
-- [`css-minimizer-webpack-plugin`](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/) - Optimize and minimize CSS assets
-
-### Linters
-
-- [`eslint`](https://github.com/eslint/eslint) - Enforce styleguide across application
-- [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) - Implement prettier rules
-  - - [`prettier`](https://github.com/prettier/prettier) - Dependency for `prettier-webpack-plugin` plugin
-- [`eslint-import-resolver-webpack`](https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers/webpack) - Throw exceptions for import/export in webpack
+## Happy coding!
