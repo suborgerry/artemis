@@ -3,59 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>@tailwindcss/forms examples</title>
+  <title>Artemis</title>
   <link rel="stylesheet" href="/css/app.css" />
-  <link data-rh="true" rel="icon" type="image/x-icon" href="/static/favicon.ico"/>
+  <link data-rh="true" rel="icon" type="image/x-icon" href="/static/favicon.ico" />
 </head>
 
-<body class="flex flex-col items-center m-auto">
-  <header class="header flex justify-between w-full px-40 py-7 items-center">
-    <img src="/static/images/logo.png" alt="Main logo artenis">
-    <ul class="header_menu_desktop flex gap-x-9">
-      <li class="header_menu_item_container relative inline-block text-left">
-        <button type="button" class="header_menu_item inline-flex justify-center items-center font-normal hover:bg-gray-50 focus:outline-none " id="menu-button" aria-expanded="true" aria-haspopup="true">
-          Options
-          <svg class="-mr-1 ml-2 h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <div class="header_menu_dropdown_container scale-100 transition ease-out origin-top-right absolute hidden left-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" 
-            role="menu" 
-            aria-orientation="vertical" 
-            aria-labelledby="menu-button" 
-            tabindex="-1">
-          <div class="py-1" role="none">
-            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
-            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
-            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+<body class="flex flex-col items-center m-auto font-sans overflow-x-hidden">
+  <header class="header w-screen px-36 py-7 items-center z-30">
+    <div class="header_container flex justify-between w-full items-center">
+      <img src="/static/images/logo.png" alt="Main logo artenis">
+      <ul class="header_menu_desktop flex gap-x-9">
+        <li class="header_menu_item_container relative inline-block text-left">
+          <button type="button"
+            class="header_menu_item inline-flex justify-center items-center font-normal hover:bg-gray-50 focus:outline-none "
+            id="menu-button" aria-expanded="true" aria-haspopup="true">
+            Services
+            <svg class="-mr-1 ml-2 h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+              aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div
+            class="header_menu_dropdown_container scale-100 z-30 transition ease-out origin-top-right absolute hidden left-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+            role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+            <div class="py-1" role="none">
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                id="menu-item-0">Account settings</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                id="menu-item-1">Support</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                id="menu-item-2">License</a>
+            </div>
           </div>
-        </div>
-      </li>
-      <li class="header_menu_item"><a href="#" class="font-normal">Services</a></li>
-      <li class="header_menu_item"><a href="#" class="font-normal">About Us</a></li>
-      <li class="header_menu_item_container relative inline-block text-left">
-        <button type="button" class="header_menu_item inline-flex justify-center items-center font-normal hover:bg-gray-50 focus:outline-none " id="menu-button" aria-expanded="true" aria-haspopup="true">
-          Options
-          <svg class="-mr-1 ml-2 h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <div class="header_menu_dropdown_container scale-100 transition ease-out origin-top-right absolute hidden left-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" 
-            role="menu" 
-            aria-orientation="vertical" 
-            aria-labelledby="menu-button" 
-            tabindex="-1">
-          <div class="py-1" role="none">
-            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-article-0">Article #1</a>
-            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-article-1">Article #2</a>
-            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-article-2">Article #3</a>
+        </li>
+        <li class="header_menu_item"><a href="#" class="font-normal">Services</a></li>
+        <li class="header_menu_item"><a href="#" class="font-normal">About Us</a></li>
+        <li class="header_menu_item_container relative inline-block text-left">
+          <button type="button"
+            class="header_menu_item inline-flex justify-center items-center font-normal hover:bg-gray-50 focus:outline-none "
+            id="menu-button" aria-expanded="true" aria-haspopup="true">
+            Blog
+            <svg class="-mr-1 ml-2 h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+              aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div
+            class="header_menu_dropdown_container scale-100 z-30 transition ease-out origin-top-right absolute hidden left-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+            role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+            <div class="py-1" role="none">
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                id="menu-article-0">Article #1</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                id="menu-article-1">Article #2</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                id="menu-article-2">Article #3</a>
+            </div>
           </div>
-        </div>
-      </div>      <li class="header_menu_item"><a href="#" class="font-normal">Contact Us</a></li>
-      <li class="header_menu_item"><a href="#" class="font-normal">Podcast</a></li>
-    </ul>
-    <div class="header__options flex items-center">
-      <select id="dropdown-header" class="
+        <li class="header_menu_item"><a href="#" class="font-normal">Contact Us</a></li>
+        <li class="header_menu_item"><a href="#" class="font-normal">Podcast</a></li>
+      </ul>
+      <div class="header__options flex items-center">
+        <select id="dropdown-header" class="
         bg-white 
         bg-clip-padding
         bg-no-repeat
@@ -77,10 +90,90 @@
           <option class="header_options_languages_item" value="English" selected>English</option>
           <option class="header_options_languages_item" value="Ukrainian">Ukrainian</option>
           <option class="header_options_languages_item" value="Poland">Poland</option>
-      </select>
-      <div class="header__search  hover:cursor-pointer"><img src="./static/images/shape.png" alt="search"></div>
+        </select>
+        <div class="header__search  hover:cursor-pointer"><img src="./static/images/shape.png" alt="search"></div>
+      </div>
     </div>
   </header>
+  <main class="main flex flex-col w-full">
+    <div class="main_banner py-28 relative px-36">
+      <h1 class="max-w-xl font-serif text-6xl z-20 relative">
+        Creating Positive Impact with Artemis
+      </h1>
+      <p class="main_banner_text max-w-xl article-text mt-6 leading-7 z-20 relative">
+        We all live inside an interconnected network in need of positive,<br>
+        socially connected changes that achieve measurable results. Artemis<br>
+        was founded to create these positive connections, and achieve these<br>
+        results with our impact-driven focus!
+      </p>
+      <div class="main_banner_buttons max-w-xl w-full flex mt-14 z-20 relative">
+        <button
+          class="main_banner_button rounded-full bg-yellow-400 py-4 px-11 text-lg mr-5 hover:bg-yellow-300 transition-all"
+          type="button">Download App</button>
+        <button
+          class="main_banner_button rounded-full border py-4 px-11 text-lg border-color-45-65-94 transition-all hover:bg-yellow-100"
+          type="button">Get in touch</button>
+      </div>
+      <img src="./static/images/mainban.jpg" alt="Rectangle" class="main_banner_image absolute top-0 right-0 z-10">
+    </div>
+    <div class="px-36 main_title_container mt-36 mb-24 flex justify-center items-end relative w-full">
+      <h2 class="main_title text-5xl font-serif">We are here to help you!</h2>
+      <img class="absolute right-40" src="./static/images/rounds.svg" alt="Rounds">
+    </div>
+    <div class="main_info_block bg-slate-50">
+      <div class="main_info_container px-36 py-28 relative">
+        <h3 class="main_info_block_title max-w-xl font-serif text-5xl z-20 relative">Outcome-based Funding</h3>
+        <p class="main_info_block_text max-w-xl article-text mt-6 leading-7 z-20 relative">
+          For our individual or institutional donors and NGO receiver<br>
+          teams, our Artemis services can provide the focused precision<br>
+          in locating, connecting, and enabling the most specific<br>
+          projects for your funds, along with the most transparent and<br>
+          measurable, data-driven results for you & your stakeholders.<br>
+          We cater to projects in all stages: Pre-funding, Already<br>
+          funded.
+        </p>
+        <button class="
+                    main_banner_button rounded-full 
+                    bg-yellow-400 
+                    py-4 
+                    px-14
+                    text-lg mr-5
+                    hover:bg-yellow-300
+                    transition-all
+                    mt-14 z-20 relative" type="button">Сontact us</button>
+        <img src="./static/images/outcome.png" alt="Rectangle" class="main_banner_image absolute top-12 right-20 z-10">
+      </div>
+    </div>
+    <div class="main_info_block">
+      <div class="main_info_container px-24 py-28 relative flex items-center justify-between">
+        <img src="./static/images/advisory.png" alt="Rectangle" class="main_banner_image z-10">
+        <div class="main_info_container_items flex flex-col">
+          <h3 class="main_info_block_title max-w-xl font-serif text-5xl z-20 relative">Advisory Services</h3>
+          <p class="main_info_block_text max-w-xl article-text mt-6 leading-7 z-20 relative">
+            The need for having a CSR program, which creates value is an<br>
+            absolute necessity in the corporate & private sector spheres.<br>
+            Helping you define projects aligned with your core business,<br>
+            providing a more purpose-driven momentum, achieve the<br>
+            targeted results required to create a sustainable impact<br>
+            supported with transparent, data-driven reports is always the<br>
+            Artemis priority.
+          </p>
+          <div class="main_info_container_buttons flex justify-between mt-14">
+            <button class="
+                    main_banner_button rounded-full 
+                    bg-yellow-400 
+                    py-4 
+                    px-14
+                    text-lg
+                    hover:bg-yellow-300
+                    transition-all
+                    z-20 relative" type="button">Сontact us</button>
+            <img src="./static/images/ovals.png" alt="Ovals" class="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>

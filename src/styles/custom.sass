@@ -1,13 +1,21 @@
 // Variables
 $font-common: 'Open Sans', sans-serif
+$font-titles: 'Georgia', generic-family
+
 $font-size-menu: 14px
 $font-size-articles: 16px
-
+$font-size-titles: 48px
 *
     font-family: $font-common
 
 body
     max-width: 1440px
+
+.header_container
+    max-width: 1440px
+
+.header
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.0826049)
 
 .header_menu_item
     font-size: $font-size-menu
@@ -21,3 +29,15 @@ body
     &:hover
         .header_menu_dropdown_container
             display: block
+
+.article-text
+    font-size: $font-size-articles
+
+.border-color-45-65-94
+    border-color: #2D415E
+
+.main_banner_image
+    // right: -14%
+
+.article_title
+    font-size: $font-size-titles
