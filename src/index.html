@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Artemis</title>
   <link rel="stylesheet" href="/css/app.css" />
+  
   <link data-rh="true" rel="icon" type="image/x-icon" href="/static/favicon.ico" />
 </head>
 
@@ -173,7 +174,63 @@
         </div>
       </div>
     </div>
+    <div class="main_carousel px-56">
+      <h3 class="main_carousel_title text-5xl my-20 font-serif text-center">What’s New?</h3>
+      <div class="owl_carousel">
+        <div class="owl_corousel_item">
+          <a href="#" class="w-full">
+            <div class="carousel_previev_container w-full mb-5 flex justify-center items-center">
+              <img src="./static/images/Bitmap1.jpg" alt="" class="w-full">
+            </div>
+            <span class="text-xl">Merdeka Belajar & Sekolah Alternatif - Artemis Impact Podcast #5</span>
+          </a>
+        </div>
+        <div class="owl_corousel_item">
+          <a href="#" class="w-max h-max">
+            <div class="carousel_previev_container w-full mb-5 flex justify-center items-center">
+              <img src="./static/images/Bitmap2.jpg" alt="" class="w-full">
+            </div>  
+            <span class="text-xl">We Are Watching You - Artemis Impact Podcast #4</span>
+          </a>
+        </div>
+        <div class="owl_corousel_item">
+          <a href="#" class="w-max h-max">
+            <div class="carousel_previev_container w-full mb-5 flex justify-center items-center">
+              <img src="./static/images/Bitmap3.jpg" alt="" class="w-full">
+            </div>
+            <span class="text-xl">NGO dan Komunitas Lingkungan di Indonesia - Artemis Impact Podcast #3</span>
+          </a>
+        </div>
+        <div class="owl_corousel_item">
+          <a href="#" class="w-max h-max">
+            <div class="carousel_previev_container w-full mb-5 flex justify-center items-center">
+              <img src="./static/images/Bitmap1.jpg" alt="" class="w-full">
+            </div>
+            <span class="text-xl">Merdeka Belajar & Sekolah Alternatif - Artemis Impact Podcast #5</span>
+          </a>
+        </div>
+        <div class="owl_corousel_item">
+          <a href="#" class="w-max h-max">
+            <div class="carousel_previev_container w-full mb-5 flex justify-center items-center">
+              <img src="./static/images/Bitmap3.jpg" alt="" class="w-full">
+            </div>
+            <span class="text-xl">NGO dan Komunitas Lingkungan di Indonesia - Artemis Impact Podcast #3</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </main>
-</body>
 
+  <script src="./static/js/jquery-3.6.0.min.js"></script>
+  <script src="./static/owl-carousel/owl.carousel.min.js"></script>
+  <script>
+    $('.owl_carousel').owlCarousel({
+        loop:true,
+        margin:26,
+        nav:true,
+        items:3,
+        navText:["<img src='./static/images/arrow.png'>", "<img src='./static/images/arrow.png'>"]
+    })
+  </script>
+</body>
 </html>
