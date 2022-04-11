@@ -14,6 +14,11 @@ $hover-button-color: #FFCC2A
 body
     max-width: 1440px
 
+input
+    box-shadow: none !important
+    &:focus
+        box-shadow: none !important
+
 .header_container
     max-width: 1440px
 
@@ -76,5 +81,32 @@ body
         top: 8px
         left: -20px
 
+.beforeicon_phone_black
+    &::before    
+        content: ""
+        background: url('../static/images/phoneicoblack.png')
+        display: block
+        width: 10px
+        height: 10px
+        position: absolute
+        background-size: 100% 100%
+        top: 8px
+        left: -20px
+
+.beforeicon_mail_black
+    &::before    
+        content: ""
+        background: url('../static/images/mailicoblack.png')
+        display: block
+        width: 12px
+        height: 8px
+        position: absolute
+        background-size: 100% 100%
+        top: 8px
+        left: -20px
+
 .main_contactform_container_form
     width: 33rem
+
+.footer_container
+    max-width: 1400px
