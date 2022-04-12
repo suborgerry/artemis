@@ -138,12 +138,13 @@
         .owl-stage-outer
             z-index: 9
         .owl-nav
-            display: flex
-            justify-content: space-between
-            position: absolute
-            bottom: 55%
-            left: -10%
-            width: 120%
+            &:not(.disabled)                
+                display: flex
+                justify-content: space-between
+                position: absolute
+                bottom: 55%
+                left: -10%
+                width: 120%
             button
                 width: 49px
                 height: 49px

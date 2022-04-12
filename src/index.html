@@ -10,8 +10,8 @@
 </head>
 
 <body class="flex flex-col items-center m-auto font-sans overflow-x-hidden">
-  <header class="header w-screen px-36 py-7 items-center z-30">
-    <div class="header_container flex justify-between w-full items-center">
+  <header class="header hidden lg:flex w-screen xl:px-36 px-24 py-7 items-center z-30">
+    <div class="header_container flex justify-between w-full items-center m-auto">
       <img src="./static/images/logo.png" alt="Main logo artenis">
       <ul class="header_menu_desktop flex gap-x-9">
         <li class="header_menu_item_container relative inline-block text-left">
@@ -68,7 +68,7 @@
         <li class="header_menu_item"><a href="#" class="font-normal">Contact Us</a></li>
         <li class="header_menu_item"><a href="#" class="font-normal">Podcast</a></li>
       </ul>
-      <div class="header__options flex items-center">
+      <div class="header_options flex items-center">
         <select id="dropdown-header" class="
         bg-white 
         bg-clip-padding
@@ -98,13 +98,13 @@
   </header>
   <main class="main flex flex-col w-full">
     <div class="main_banner py-28 relative px-36">
-      <h1 class="max-w-xl font-serif text-6xl z-20 relative">
+      <h1 class="main_banner_title max-w-xl font-serif text-6xl z-20 relative">
         Creating Positive Impact with Artemis
       </h1>
-      <p class="main_banner_text max-w-xl article-text mt-6 leading-7 z-20 relative">
-        We all live inside an interconnected network in need of positive,<br>
-        socially connected changes that achieve measurable results. Artemis<br>
-        was founded to create these positive connections, and achieve these<br>
+      <p class="main_banner_text article-text mt-6 leading-7 z-20 relative flex flex-wrap max-w-xl">
+        We all live inside an interconnected network in need of positive,
+        socially connected changes that achieve measurable results. Artemis
+        was founded to create these positive connections, and achieve these
         results with our impact-driven focus!
       </p>
       <div class="main_banner_buttons max-w-xl w-full flex mt-14 z-20 relative">
@@ -115,22 +115,22 @@
           class="main_banner_button rounded-full border py-4 px-11 text-lg border-color-45-65-94 transition-all hover:bg-yellow-100"
           type="button">Get in touch</button>
       </div>
-      <img src="./static/images/mainban.jpg" alt="Rectangle" class="main_banner_image absolute top-0 right-0 z-10">
+      <img src="./static/images/mainban2.png" alt="Rectangle" class="main_banner_image absolute top-0 right-0 z-10">
     </div>
-    <div class="px-36 main_title_container mt-36 mb-24 flex justify-center items-end relative w-full">
+    <div class="px-36 main_title_container bg-white py-36 flex justify-center items-end relative w-full">
       <h2 class="main_title text-5xl font-serif">We are here to help you!</h2>
       <img class="absolute right-40" src="./static/images/rounds.svg" alt="Rounds">
     </div>
     <div class="main_info_block bg-slate-50">
       <div class="main_info_container px-36 py-28 relative">
         <h3 class="main_info_block_title max-w-xl font-serif text-5xl z-20 relative">Outcome-based Funding</h3>
-        <p class="main_info_block_text max-w-xl article-text mt-6 leading-7 z-20 relative">
-          For our individual or institutional donors and NGO receiver<br>
-          teams, our Artemis services can provide the focused precision<br>
-          in locating, connecting, and enabling the most specific<br>
-          projects for your funds, along with the most transparent and<br>
-          measurable, data-driven results for you & your stakeholders.<br>
-          We cater to projects in all stages: Pre-funding, Already<br>
+        <p class="main_info_block_text xxl:max-w-lg article-text mt-6 leading-7 z-20 relative">
+          For our individual or institutional donors and NGO receiver
+          teams, our Artemis services can provide the focused precision
+          in locating, connecting, and enabling the most specific
+          projects for your funds, along with the most transparent and
+          measurable, data-driven results for you & your stakeholders.
+          We cater to projects in all stages: Pre-funding, Already
           funded.
         </p>
         <button class="
@@ -147,18 +147,19 @@
     </div>
     <div class="main_info_block">
       <div class="main_info_container px-24 py-28 relative flex items-center justify-between">
-        <img src="./static/images/advisory.png" alt="Rectangle" class="main_banner_image z-10">
+        <img src="./static/images/advisory.png" alt="Rectangle" class="main_banner_image main_banner_image_left z-10">
         <div class="main_info_container_items flex flex-col">
           <h3 class="main_info_block_title max-w-xl font-serif text-5xl z-20 relative">Advisory Services</h3>
           <p class="main_info_block_text max-w-xl article-text mt-6 leading-7 z-20 relative">
-            The need for having a CSR program, which creates value is an<br>
-            absolute necessity in the corporate & private sector spheres.<br>
-            Helping you define projects aligned with your core business,<br>
-            providing a more purpose-driven momentum, achieve the<br>
-            targeted results required to create a sustainable impact<br>
-            supported with transparent, data-driven reports is always the<br>
+            The need for having a CSR program, which creates value is an
+            absolute necessity in the corporate & private sector spheres.
+            Helping you define projects aligned with your core business,
+            providing a more purpose-driven momentum, achieve the
+            targeted results required to create a sustainable impact
+            supported with transparent, data-driven reports is always the
             Artemis priority.
           </p>
+          <img src="./static/images/advisory.png" alt="Rectangle" class="main_banner_image_mob main_banner_image_left z-10 hidden">
           <div class="main_info_container_buttons flex justify-between mt-14">
             <button class="
                     main_banner_button rounded-full 
@@ -283,7 +284,7 @@
     </div>
   </main>
   <footer class="footer flex flex-col items-center w-screen bg-slate-50">
-    <div class="footer_container flex gap-16 px-36 pt-14 pb-7">
+    <div class="footer_container w-full flex gap-16 px-36 pt-14 pb-7">
       <div class="footer_container_logo">
         <img src="./static/images/logo.png" alt="Artemis logo">
       </div>
@@ -334,10 +335,22 @@
     $('.owl_carousel').owlCarousel({
         loop:true,
         margin:26,
-        nav:true,
-        items:3,
-        navText:["<img src='./static/images/arrow.png'>", "<img src='./static/images/arrow.png'>"]
-    })
+        nav:false,
+        // items:3,
+        navText:["<img src='./static/images/arrow.png'>", "<img src='./static/images/arrow.png'>"],
+        responsive: {
+          0: {
+            items: 1
+          },
+          700: {
+            items: 2,
+            nav: true
+          },
+          1080: {
+            items: 3
+          }
+        }
+      })
   </script>
 </body>
 </html>

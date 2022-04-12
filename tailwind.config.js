@@ -8,7 +8,7 @@ module.exports = {
         sans: ['Lato', ...defaultTheme.fontFamily.sans],
       },
       screens: {
-        xxl: '1410px',
+        xxl: '1390px',
       },
     },
   },
