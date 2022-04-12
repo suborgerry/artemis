@@ -4,29 +4,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <meta name="application-name" content="Artemis | Hi"/>
+  <meta name="application-name" content="Artemis | Hi" />
   <meta name="msapplication-TileColor" content="#fdfdfd" />
   <meta name="msapplication-square150x150logo" content="./static/images/logo.png">
   <meta name="msapplication-square310x310logo" content="./static/images/logo.png" />
 
   <title>Artemis</title>
 
-  <meta
-        content="Aremis test description"
-        name="description">
-    <meta property="og:title" content="Artemis | Hi">
-    <meta property="og:description"
-        content="Aremis test description">
+  <meta content="Aremis test description" name="description">
+  <meta property="og:title" content="Artemis | Hi">
+  <meta property="og:description" content="Aremis test description">
 
   <link rel="stylesheet" href="/css/app.css" />
-  
+
   <link data-rh="true" rel="icon" type="image/x-icon" href="./static/favicon.ico" />
 </head>
 
 <body class="flex flex-col items-center m-auto font-sans overflow-x-hidden">
+  <header class="header_mobile lg:hidden w-full p-3">
+    <div class="head_line flex justify-between items-center w-full">
+      <img src="./static/images/logo.png" alt="Main logo artenis">
+      <button type="button" class="head_line_button" id="menu-button">
+        <img src="./static/images/menu.png" class="open absolute top-0 right-0" alt="close image">
+        <span class="closed"><img src="./static/images/closeoval.png" class="absolute top-0 right-0" alt="close image"></span>
+      </button>
+      <div class="header_container flex flex-col justify-between w-full items-start bg-white m-auto absolute z-40 px-3">
+        <ul class="header_menu_mobile flex flex-col w-full" id="mobile-list">
+          <li class="header_menu_item_container relative inline-block text-left">
+            <button type="button"
+              class="header_menu_item inline-flex justify-center items-center font-normal hover:bg-gray-50 focus:outline-none "
+              aria-expanded="true" aria-haspopup="true">
+              Services
+              <svg class="-mr-1 ml-2 h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div
+              class="header_menu_dropdown_container_mobile scale-100 z-30 transition ease-out origin-top-right w-full hidden left-0 shadow-none bg-white ring-1 ring-opacity-0 focus:outline-none"
+              role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+              <div class="py-1" role="none">
+                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1">Account
+                  settings</a>
+                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1">Support</a>
+                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1">License</a>
+              </div>
+            </div>
+          </li>
+          <li class="header_menu_item"><a href="#" class="font-normal">Services</a></li>
+          <li class="header_menu_item"><a href="#" class="font-normal">About Us</a></li>
+          <li class="header_menu_item_container relative inline-block text-left">
+            <button type="button"
+              class="header_menu_item inline-flex justify-center items-center font-normal hover:bg-gray-50 focus:outline-none "
+              aria-expanded="true" aria-haspopup="true">
+              Blog
+              <svg class="-mr-1 ml-2 h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </button>
+            <div
+              class="header_menu_dropdown_container_mobile scale-100 z-30 transition ease-out origin-top-right w-full hidden left-0 shadow-none bg-white ring-1 ring-opacity-0 focus:outline-none"
+              role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+              <div class="py-1" role="none">
+                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1">Article #1</a>
+                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1">Article #2</a>
+                <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1">Article #3</a>
+              </div>
+            </div>
+          <li class="header_menu_item"><a href="#" class="font-normal">Contact Us</a></li>
+          <li class="header_menu_item"><a href="#" class="font-normal">Podcast</a></li>
+        </ul>
+        <div class="header_options flex items-start gap-3 flex-col">
+          <select class="
+          bg-white 
+          bg-clip-padding
+          bg-no-repeat
+          border-none
+          rounded
+          transition
+          ease-in-out
+          m-0
+          pr-2.5
+          mr-8
+          font-semibold
+          focus:border-0
+          focus:outline-none
+          active:outline-none
+          active:border-0
+          hover:cursor-pointer
+          header_options_languages_item
+          ">
+            <option class="header_options_languages_item" value="English" selected>English</option>
+            <option class="header_options_languages_item" value="Ukrainian">Ukrainian</option>
+            <option class="header_options_languages_item" value="Poland">Poland</option>
+          </select>
+          <div class="header__search  hover:cursor-pointer"><img src="./static/images/shape.png" alt="search"></div>
+        </div>
+      </div>
+    </div>
+  </header>
   <header class="header hidden lg:flex w-screen xl:px-36 px-24 py-7 items-center z-30">
     <div class="header_container flex justify-between w-full items-center m-auto">
       <img src="./static/images/logo.png" alt="Main logo artenis">
@@ -34,7 +118,7 @@
         <li class="header_menu_item_container relative inline-block text-left">
           <button type="button"
             class="header_menu_item inline-flex justify-center items-center font-normal hover:bg-gray-50 focus:outline-none "
-            id="menu-button" aria-expanded="true" aria-haspopup="true">
+            aria-expanded="true" aria-haspopup="true">
             Services
             <svg class="-mr-1 ml-2 h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
               aria-hidden="true">
@@ -47,12 +131,10 @@
             class="header_menu_dropdown_container scale-100 z-30 transition ease-out origin-top-right absolute hidden left-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
             role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
             <div class="py-1" role="none">
-              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                id="menu-item-0">Account settings</a>
-              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                id="menu-item-1">Support</a>
-              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                id="menu-item-2">License</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1">Account
+                settings</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1">Support</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1">License</a>
             </div>
           </div>
         </li>
@@ -61,7 +143,7 @@
         <li class="header_menu_item_container relative inline-block text-left">
           <button type="button"
             class="header_menu_item inline-flex justify-center items-center font-normal hover:bg-gray-50 focus:outline-none "
-            id="menu-button" aria-expanded="true" aria-haspopup="true">
+            aria-expanded="true" aria-haspopup="true">
             Blog
             <svg class="-mr-1 ml-2 h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
               aria-hidden="true">
@@ -74,19 +156,16 @@
             class="header_menu_dropdown_container scale-100 z-30 transition ease-out origin-top-right absolute hidden left-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
             role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
             <div class="py-1" role="none">
-              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                id="menu-article-0">Article #1</a>
-              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                id="menu-article-1">Article #2</a>
-              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-                id="menu-article-2">Article #3</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1">Article #1</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1">Article #2</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1">Article #3</a>
             </div>
           </div>
         <li class="header_menu_item"><a href="#" class="font-normal">Contact Us</a></li>
         <li class="header_menu_item"><a href="#" class="font-normal">Podcast</a></li>
       </ul>
       <div class="header_options flex items-center">
-        <select id="dropdown-header" class="
+        <select class="
         bg-white 
         bg-clip-padding
         bg-no-repeat
@@ -176,7 +255,8 @@
             supported with transparent, data-driven reports is always the
             Artemis priority.
           </p>
-          <img src="./static/images/advisory.png" alt="Rectangle" class="main_banner_image_mob main_banner_image_left z-10 hidden">
+          <img src="./static/images/advisory.png" alt="Rectangle"
+            class="main_banner_image_mob main_banner_image_left z-10 hidden">
           <div class="main_info_container_buttons flex justify-between mt-14">
             <button class="
                     main_banner_button rounded-full 
@@ -207,7 +287,7 @@
           <a href="#" class="w-max h-max">
             <div class="carousel_previev_container w-full mb-5 flex justify-center items-center">
               <img src="./static/images/Bitmap2.jpg" alt="" class="w-full">
-            </div>  
+            </div>
             <span class="text-xl">We Are Watching You - Artemis Impact Podcast #4</span>
           </a>
         </div>
@@ -242,27 +322,27 @@
         Start your Social Impact Journey Today
       </h3>
       <div class="main_contactform_container flex">
-          <div class="main_contactform_container_info pt-12 px-16 pb-24 text-white">
-            <h4 class="main_contactform_container_info_title text-3xl">General Inquiries</h4>
-            <p class="main_contactform_container_info_phone text-base mt-8 relative beforeicon_phone">
-              <a href="Tel:+62-858-9444-2405">+62-858-9444-2405</a>
-            </p>
-            <p class="main_contactform_container_info_mail text-base flex flex-col relative beforeicon_mail mt-3">
-              <a href="mailto:contact@artemis.im">contact@artemis.im</a>
-              <a href="mailto:simon@artemis.im">simon@artemis.im</a>
-            </p>
-            <h4 class="main_contactform_container_info_title text-3xl mt-20">Media & Press</h4>
-            <p class="main_contactform_container_info_phone text-base mt-8 relative beforeicon_phone">
-              <a href="Tel:+62 812-8337-4974">+62 812-8337-4974</a>
-            </p>
-            <p class="main_contactform_container_info_mail text-base flex flex-col relative beforeicon_mail mt-3">
-              <a href="meilto:contact@artemis.im">contact@artemis.im</a>
-            </p>
-          </div>
-          <div class="main_contactform_container_form pt-12 pl-5 pr-10 bg-cover">
-            <h4 class="main_contactform_container_form_title text-3xl">Get in touch</h4>
-            <form class="flex flex-col items-center gap-10 mt-11" id="contact-form">
-              <input type="text" name="name" id="contact-name" placeholder="Name" class="
+        <div class="main_contactform_container_info pt-12 px-16 pb-24 text-white">
+          <h4 class="main_contactform_container_info_title text-3xl">General Inquiries</h4>
+          <p class="main_contactform_container_info_phone text-base mt-8 relative beforeicon_phone">
+            <a href="Tel:+62-858-9444-2405">+62-858-9444-2405</a>
+          </p>
+          <p class="main_contactform_container_info_mail text-base flex flex-col relative beforeicon_mail mt-3">
+            <a href="mailto:contact@artemis.im">contact@artemis.im</a>
+            <a href="mailto:simon@artemis.im">simon@artemis.im</a>
+          </p>
+          <h4 class="main_contactform_container_info_title text-3xl mt-20">Media & Press</h4>
+          <p class="main_contactform_container_info_phone text-base mt-8 relative beforeicon_phone">
+            <a href="Tel:+62-812-8337-4974">+62 812-8337-4974</a>
+          </p>
+          <p class="main_contactform_container_info_mail text-base flex flex-col relative beforeicon_mail mt-3">
+            <a href="meilto:contact@artemis.im">contact@artemis.im</a>
+          </p>
+        </div>
+        <div class="main_contactform_container_form pt-12 pl-5 pr-10 bg-cover">
+          <h4 class="main_contactform_container_form_title text-3xl">Get in touch</h4>
+          <form class="flex flex-col items-center gap-10 mt-11" id="contact-form">
+            <input type="text" name="name" id="contact-name" placeholder="Name" class="
                 main_contactform_container_form_input
                 bg-transparent
                 border-0
@@ -270,7 +350,7 @@
                 border-b
                 pl-0
                 w-full">
-              <input type="email" name="email" id="contact-email" placeholder="Email" class="
+            <input type="email" name="email" id="contact-email" placeholder="Email" class="
                 main_contactform_container_form_input
                 bg-transparent
                 border-0
@@ -278,7 +358,7 @@
                 border-b
                 pl-0
                 w-full">
-              <input type="text" name="text" id="contact-text" placeholder="Message" class="
+            <input type="text" name="text" id="contact-text" placeholder="Message" class="
                 main_contactform_container_form_input
                 bg-transparent
                 border-0
@@ -286,7 +366,7 @@
                 border-b
                 pl-0
                 w-full">
-              <button class="
+            <button class="
                     main_banner_button rounded-full 
                     bg-yellow-400 
                     py-4 
@@ -295,8 +375,8 @@
                     hover:bg-yellow-300
                     transition-all
                     z-20 relative" type="button">Submit</button>
-            </form>
-          </div>
+          </form>
+        </div>
       </div>
     </div>
   </main>
@@ -329,7 +409,8 @@
         <p class="footer_container_contacts_phone text-base mt-8 ml-6 relative beforeicon_phone_black">
           <a href="Tel:+62-858-9444-2405">+62-858-9444-2405</a>
         </p>
-        <p class="main_contactform_container_info_mail text-base flex flex-col ml-6 relative beforeicon_mail_black mt-3">
+        <p
+          class="main_contactform_container_info_mail text-base flex flex-col ml-6 relative beforeicon_mail_black mt-3">
           <a href="mailto:contact@artemis.im">contact@artemis.im</a>
         </p>
       </div>
@@ -345,5 +426,9 @@
     </div>
     <p class="footer_rightsreserved w-full text-center text-xs py-4 border-t">All rights reserved (c) Artemis 2022</p>
   </footer>
+  <script src="./static/js/jquery-3.6.0.min.js"></script>
+  <script src="./static/js/owl.carousel.min.js"></script>
+  <script src="./static/js/owl.carousel.custom.js"></script>
 </body>
+
 </html>

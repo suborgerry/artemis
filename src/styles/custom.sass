@@ -33,7 +33,7 @@ input
 
 .header_options
     select
-        background-color: #f8f8f8
+        // background-color: #f8f8f8
 
 .header_options_languages_item
     font-size: $font-size-menu
@@ -42,6 +42,50 @@ input
     &:hover
         .header_menu_dropdown_container
             display: block
+
+.header_mobile
+    .header_container
+        top: 0
+        // left: 0
+        right: -100vw
+        margin-top: 60px
+        padding-bottom: 15px
+    .header_menu_mobile
+        & > li
+            padding: 10px 25px
+            width: 100%
+    .header_options
+        padding-left: 15px
+        margin-top: 10px
+    .header__search
+        padding: 12px 0
+        margin-left: 10px
+
+    .open
+        & + .header_menu_dropdown_container_mobile
+            display: block
+            --tw-ring-shadow: transparent
+        & + .header_container
+            right: 0
+            left: 0
+.head_line_button
+    width: 34px
+    height: 34px
+    position: relative
+    & .closed
+        opacity: 0
+    & .open
+        opacity: 1
+    &.closed
+        & .closed
+            opacity: 1
+            &::after
+                content: "\2715"
+                position: relative
+                top: -1px
+        & .open
+            opacity: 0
+
 
 .article-text
     font-size: $font-size-articles
